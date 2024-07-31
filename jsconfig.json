@@ -55,12 +55,12 @@
         "C:\\Users\\Mahdi\\AppData\\Local/.meteor/packages/accounts-password/2.4.0/web.browser/password_server.js"
       ],
       "meteor/meteortesting:mocha": [
-        "C:\\Users\\Mahdi\\AppData\\Local/.meteor/packages/meteortesting_mocha/2.0.3/web.browser/client.js",
-        "C:\\Users\\Mahdi\\AppData\\Local/.meteor/packages/meteortesting_mocha/2.0.3/web.browser/browser-shim.js",
-        "C:\\Users\\Mahdi\\AppData\\Local/.meteor/packages/meteortesting_mocha/2.0.3/web.browser/prepForHTMLReporter.js",
-        "C:\\Users\\Mahdi\\AppData\\Local/.meteor/packages/meteortesting_mocha/2.0.3/web.browser/runtimeArgs.js",
-        "C:\\Users\\Mahdi\\AppData\\Local/.meteor/packages/meteortesting_mocha/2.0.3/web.browser/server.handleCoverage.js",
-        "C:\\Users\\Mahdi\\AppData\\Local/.meteor/packages/meteortesting_mocha/2.0.3/web.browser/server.js"
+        "C:\\Users\\Mahdi\\AppData\\Local/.meteor/packages/meteortesting_mocha/2.1.0/web.browser/client.js",
+        "C:\\Users\\Mahdi\\AppData\\Local/.meteor/packages/meteortesting_mocha/2.1.0/web.browser/browser-shim.js",
+        "C:\\Users\\Mahdi\\AppData\\Local/.meteor/packages/meteortesting_mocha/2.1.0/web.browser/prepForHTMLReporter.js",
+        "C:\\Users\\Mahdi\\AppData\\Local/.meteor/packages/meteortesting_mocha/2.1.0/web.browser/runtimeArgs.js",
+        "C:\\Users\\Mahdi\\AppData\\Local/.meteor/packages/meteortesting_mocha/2.1.0/web.browser/server.handleCoverage.js",
+        "C:\\Users\\Mahdi\\AppData\\Local/.meteor/packages/meteortesting_mocha/2.1.0/web.browser/server.js"
       ],
       "meteor/hot-module-replacement": [
         "C:\\Users\\Mahdi\\AppData\\Local/.meteor/packages/hot-module-replacement/0.5.3/web.browser/hot-api.js",
@@ -68,8 +68,8 @@
         "C:\\Users\\Mahdi\\AppData\\Local/.meteor/packages/hot-module-replacement/0.5.3/web.browser/server.js"
       ],
       "meteor/blaze-hot": [
-        "C:\\Users\\Mahdi\\AppData\\Local/.meteor/packages/blaze-hot/1.1.1/web.browser/hot.js",
-        "C:\\Users\\Mahdi\\AppData\\Local/.meteor/packages/blaze-hot/1.1.1/web.browser/update-templates.js"
+        "C:\\Users\\Mahdi\\AppData\\Local/.meteor/packages/blaze-hot/1.1.2/web.browser/hot.js",
+        "C:\\Users\\Mahdi\\AppData\\Local/.meteor/packages/blaze-hot/1.1.2/web.browser/update-templates.js"
       ],
       "meteor/dev-error-overlay": [
         "C:\\Users\\Mahdi\\AppData\\Local/.meteor/packages/dev-error-overlay/0.1.2/web.browser/client.js"

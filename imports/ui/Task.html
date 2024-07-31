@@ -1,7 +1,10 @@
 <template name="task">
-    <li>
-        <input type="checkbox" checked="{{isChecked}}" class="toggle-checked" />
-        <span>{{text}}</span>
-        <button class="delete">&times;</button>
-    </li>
+  <li>
+    <input type="checkbox" checked="{{isChecked}}" class="toggle-checked" />
+    <span class="text">{{text}}</span>
+    <input type="text" class="edit-text" value="{{text}}" style="display:none;" />
+    <button class="edit">edit</button>
+    <button class="save" style="display:none;">save</button>
+    <button class="delete">&times;</button>
+  </li>
 </template>

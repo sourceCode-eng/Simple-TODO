@@ -53,4 +53,25 @@ Meteor.methods({
       },
     });
   },
+
+  'tasks.update'(taskId, newText) {
+    check(taskId, String);
+    check(newText, String);
+
+    if (!this.userId) {
+      throw new Meteor.Error('Not authorized.');
+    }
+
+    const task = TasksCollection.findOne({ _id: taskId, userId: this.userId });
+
+    if (!task) {
+      throw new Meteor.Error('Access denied.');
+    }
+
+    TasksCollection.update(taskId, {
+      $set: {
+        text: newText,
+      },
+    });
+  },
 });
