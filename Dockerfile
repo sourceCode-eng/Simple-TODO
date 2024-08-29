@@ -1,35 +1,26 @@
-# Use the official Meteor base image
-FROM geoffreybooth/meteor-base:latest
+# Build stage
+FROM zcloudws/meteor-build:2.11.0 as builder
 
-# Set the working directory in the container
-WORKDIR /app
+USER root
 
-# Copy your app's source code into the container
-COPY . /app
+RUN mkdir -p /build/source && chown zcloud:zcloud -R /build
 
-# Install OS dependencies, if any
-RUN apt-get update && apt-get install -y --no-install-recommends \
-    build-essential \
-    python \
-    && rm -rf /var/lib/apt/lists/*
+USER zcloud
 
-# Install NPM packages
-RUN meteor npm install
+COPY --chown=zcloud:zcloud . /build/source
 
-# Build the Meteor app
-RUN meteor build --directory /app-build
+RUN cd /build/source && \
+    meteor npm install && \
+    meteor build --directory ../app-build
 
-# Use the Node.js base image to run the app
-FROM meteor/node:14.21.4-alpine3.17
+# Clean image with builded app
+FROM zcloudws/meteor-node-mongodb-runtime:2.11.0
 
-WORKDIR /app
+COPY --from=builder /build/app-build/bundle /home/zcloud/app
 
-# Copy the built app from the previous stage and install production NPM packages
-COPY --from=0 /app-build /app
-RUN cd /app/bundle/programs/server && npm install
+RUN cd /home/zcloud/app/programs/server && npm install
 
-# Expose the port the app runs on
-EXPOSE 3000
+WORKDIR /home/zcloud/app
 
-# Define the command to run your app
-CMD ["node", "/app/bundle/main.js"]
+# Entrypoint from image
+ENTRYPOINT ["/scripts/startup.sh"]
